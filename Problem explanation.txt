@@ -1,0 +1,15 @@
+In this problem, you are given a tree with N vertices. Each vertex has a positive integer written on it. The goal is to process two types of queries:
+
+1. Find query (F u v): You need to find the greatest common divisor (gcd) of all the numbers written on the unique path between vertices u and v in the tree, including both u and v.
+
+2. Change query (C u v d): You need to add a given value d to the number written on all the vertices along the unique path between vertices u and v in the tree, including both u and v.
+
+To solve this problem, you first read the input which consists of the size of the vertex set N, followed by N-1 lines representing the edges of the tree. Then, you read N space-separated integers representing the initial values on each vertex. After that, you read an integer Q representing the number of queries to follow. Each query is either a find query or a change query.
+
+For a find query, you need to find the gcd of all the numbers on the unique path between u and v. To do this, you can use a recursive function that performs a depth-first search (DFS) on the tree, keeping track of the current path and updating the gcd as it traverses the tree.
+
+For a change query, you need to add a value d to all the numbers on the unique path between u and v. Again, you can use a recursive function to traverse the path and update the values accordingly.
+
+Finally, you output the results for each find query.
+
+The constraints state that N and Q can have a maximum value of 50000, the vertex values vi range from 1 to 10000, and the change value d ranges from 0 to 10000.
